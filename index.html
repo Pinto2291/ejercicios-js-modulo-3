@@ -3,14 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ejercicios JavaScript</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-    <h1>Ejercicios de JavaScript</h1>
+    <h1 class="title text-center">Ejercicios de JavaScript</h1>
 
-    <p id="num1"></p>
-    <p id="num2"></p>
+    <h2 class="text-justify text-center">Hallar el valor mayor de dos números</h2>
+
+    <div class="number-section">
+
+        <div class="number-input">
+            <label for="number-1">Numero 1</label>
+            <input id="number_1" type="number" max="5000" min="-5000">
+        </div>
+        
+        <div class="number-input">
+            <label for="number_2">Numero 2</label>
+            <input id="number_2" type="number" max="5000" min="-5000">
+        </div>
+
+    </div>
+
+    <button class="btn" id="comparar_numeros">Comparar</button>
+
+    <p>El resultado de comparar los 2 numeros es el siguiente:</p>
     <p id="resultado"></p>
     
     <script src="./js/numbers.js"></script>

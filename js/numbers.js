@@ -1,34 +1,32 @@
-/* EJERCICIOS DE NUMBERS */
-let num_1 = document.getElementById('num1');
-let num_2 = document.getElementById('num2');
+/* Ejercicios de numbers ------------------------------------------ */
+
+/* Hallar el valor mayor de dos (2) numeros */
+
+let num_1 = document.getElementById('number_1');
+let num_2 = document.getElementById('number_2');
 let resultado = document.getElementById('resultado');
+let comparar_numeros = document.getElementById('comparar_numeros');
 
 /* valor de dos numeros */
 
-function biggestNumber(/*{number_1, number_2}*/) {
+function biggestNumber() {
 
-    let number_1 = prompt('Coloca el primer numero');
-    let number_2 = prompt('Coloca el segundo numero');
-    
-    /* VERIFICANDO el valor colocado por el usuario */
-    console.log(`El numero 1 = ${number_1} es un ${typeof number_1} y el numero 2 = ${number_2} es un ${typeof number_2}`)
-
-    let num1 = Number(number_1);
-    let num2 = Number(number_2);
+    let num1 = Number(num_1.value);
+    let num2 = Number(num_2.value);
     
     if((num1) - (num2) > 0){
-        num_1.innerText = num1;
-        num_2.innerText = num2;
-        return resultado.innerText = `El mayor de los numeros es ${number_1}`
-    } else if((num1) - (num2) == 0) {
-        num_1.innerText = num1;
-        num_2.innerText = num2;
+        return resultado.innerText = `El mayor de los numeros es: ${num1}`
+    } else if((num1) == (num2)) {
         return resultado.innerText = `${num1} es igual a ${num2}`
     } else {
-        num_1.innerText = num1;
-        num_2.innerText = num2;
-        return resultado.innerText = `${num2} es el mayor de los 2 numeros`
+        return resultado.innerText = `El mayor de los numeros es: ${num2}`
     }
 };
 
-console.log(biggestNumber())
+comparar_numeros.addEventListener('click', () => {
+    if(num_1 && num_2){
+        biggestNumber()
+    } else {
+        console.log('debes ingresar valores en los inputs de numeros');
+    }
+})
