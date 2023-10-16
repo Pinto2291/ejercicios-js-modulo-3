@@ -24,4 +24,5 @@ Debes completar los ejercicios pautados:
 
 **Iteradores**
 1. Muestrame los elementos del iterador
-2. Iterar un array de números y devolverme el valor * 2;
+2. Iterar un array de números y devolverme el valor * 2
+3. Mostrarme los índices del array que vas a iterar.
