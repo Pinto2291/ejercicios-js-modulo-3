@@ -10,7 +10,7 @@
 
     <h1 class="title text-center">Ejercicios de JavaScript</h1>
 
-    <h2 class="text-justify text-center">Hallar el valor mayor de dos números</h2>
+    <h2 class="text-justify text-center subtitle">Operaciones con numeros</h2>
 
     <div class="number-section">
 
@@ -26,11 +26,71 @@
 
     </div>
 
-    <button class="btn" id="comparar_numeros">Comparar</button>
+    <div class="result-section">
 
-    <p>El resultado de comparar los 2 numeros es el siguiente:</p>
-    <p id="resultado"></p>
+        <button class="btn pointer" id="comparar_numeros">Comparar</button>
+
+        <p class="result">El resultado de comparar los 2 numeros es el siguiente:</p>
+
+        <p class="result" id="resultado"></p>
+        <p class="result" id="resultado-suma"></p>
+        <p class="result" id="resultado-resta"></p>
+        <p class="result" id="resultado-multiplicacion"></p>
+        <p class="result" id="resultado-division"></p>
+        <p class="result" id="resultado-raiz"></p>
+
+    </div>
+
+    <div class="section-string">
+
+        <h3 class="text-justify text-center subtitle">Operaciones con string - cadenas de texto</h3>
+
+        <textarea class="text-area-string" name="string-area" id="string-area" cols="30" rows="10"></textarea>
+
+        <button class="btn pointer" id="operaciones-string">String</button>
+
+        <p class="result" id="string-length"></p>
+        <p class="result" id="string-reverse"></p>
+        <p class="result" id="string-repeat"></p>
+
+    </div>
+
+    <div class="section-array">
+
+        <h3 class="text-justify text-center subtitle">Operaciones con Array - arreglos</h3>
+
+        <p class="result" id="initial-array"></p>
+
+        <textarea class="text-area-string" name="string-area" id="array-area" cols="30" rows="10"></textarea>
+
+        <button class="btn pointer" id="operaciones-array">Array</button>
+
+        <p class="result" id="array-start"></p>
+        <p class="result" id="array-reverse"></p>
+
+        <p class="result">Este es un array de numeros:</p>
+
+        <p class="result" id="array-sum-values"></p>
+        <p class="result" id="array-sum-result"></p>
+
+        <button class="btn pointer" id="suma-array">Sumar elementos</button>
+
+        <h3 class="text-justify text-center subtitle">Operaciones con Iteradores</h3>
+
+        <p class="result" id="iterador-valores"></p>
+
+        <p class="result">Estos son los elementos del array iterados</p>
+
+        <p class="result" id="iterador-array"></p>
+        <p class="result" id="iterador-multiplicacion"></p>
+        <p class="result" id="iterador-indice"></p>
+
+        <button class="btn pointer" id="iterador-button">Iterador</button>
+
+    </div>
+
     
+
     <script src="./js/numbers.js"></script>
 </body>
 </html>

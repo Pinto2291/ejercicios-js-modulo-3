@@ -48,6 +48,15 @@ input {
     text-transform: uppercase;
     font-size: 1.8rem;
     font-weight: bold;
+    transition: all 250ms ease-in-out 50ms;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.pointer {
+    cursor: pointer;
 }
 
 /* Main Site */
@@ -58,6 +67,11 @@ input {
     font-size: 3rem;
     margin-bottom: 2rem;
     background-color: var(--blue-background-1);
+}
+
+.subtitle {
+    margin-bottom: 2rem;
+    font-size: 2.25rem;
 }
 
 .number-section {
@@ -72,4 +86,31 @@ input {
     flex-direction: column;
     gap: 2rem;
     align-items: center;
+}
+
+/* Result */
+
+.result-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin-top: 2rem;
+}
+
+.result {
+    font-size: 2rem;
+}
+
+/* STRING */
+
+.section-string, .section-array {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.text-area-string {
+    font-size: 2rem;
 }
