@@ -100,6 +100,15 @@ input {
 
 .result {
     font-size: 2rem;
+    text-align: center;
+    margin: 0.5rem 2rem;
+}
+
+.result-style {
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 0.2rem solid black;
+    background-color: var(--blue-background-1);
 }
 
 /* STRING */
@@ -111,6 +120,47 @@ input {
     align-items: center;
 }
 
-.text-area-string {
+.text-area-string, .text {
     font-size: 2rem;
+    text-align: center;
+    margin: 0.5rem 2rem;
+}
+
+/* FOOTER */
+
+.footer {
+    font-size: 2rem;
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--blue-background-1);
+}
+
+.bold {
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+    input {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+    }
+
+    .result {
+        font-size: 1.5rem;
+    }
+
+    .text-area-string, .text {
+        font-size: 1.5rem;
+    }
 }

@@ -25,10 +25,13 @@ function biggestNumber() {
     let num2 = Number(num_2.value);
     
     if((num1) - (num2) > 0){
+        resultado.classList.add('result-style');
         return resultado.innerText = `El mayor de los numeros es: ${num1}`
     } else if((num1) == (num2)) {
+        resultado.classList.add('result-style');
         return resultado.innerText = `${num1} es igual a ${num2}`
     } else {
+        resultado.classList.add('result-style');
         return resultado.innerText = `El mayor de los numeros es: ${num2}`
     }
 };
@@ -41,22 +44,24 @@ function operaciones_con_numeros() {
     let num2 = Number(num_2.value);
 
     /* Suma */
+    resultado_suma.classList.add('result-style');
     resultado_suma.innerText = `El resultado de sumar es ${num1} + ${num2} = ${num1 + num2}`;
 
     /* Resta */
+    resultado_resta.classList.add('result-style');
     resultado_resta.innerText = `El resultado de restar es ${num1} - ${num2} = ${num1 - num2}`;
 
     /* Multiplicacion */
-
+    resultado_multiplicacion.classList.add('result-style');
     resultado_multiplicacion.innerText = `El resultado de multiplicar es ${num1} * ${num2} = ${num1 * num2}`;
 
     /* Division */
-
+    resultado_division.classList.add('result-style');
     resultado_division.innerText = `El resultado de dividir ambos numeros es ${num1} / ${num2} = ${(num1 / num2).toFixed(3)}`;
 
     /* Raiz */
-    resultado_raiz.innerText = `Las raices de los numeros son raiz de ${num1} = ${Math.sqrt(num1)} y raiz de ${num2} = ${Math.sqrt(num2)}`
-
+    resultado_raiz.classList.add('result-style');
+    resultado_raiz.innerText = `Las raices de los numeros son raiz de ${num1} = ${Math.sqrt(num1).toFixed(2)} y raiz de ${num2} = ${Math.sqrt(num2).toFixed(2)}`
 }
 
 
@@ -82,10 +87,13 @@ let string_reverse = document. getElementById('string-reverse');
 let string_repeat = document.getElementById('string-repeat');
 
 function string_operations() {
+    string_length.classList.add('result-style');
     string_length.innerText = `La longitud de la cadena de texto es = ${text_area_string.value.length}`
 
+    string_reverse.classList.add('result-style');
     string_reverse.innerText = `La cadena de texto invertida es: "${text_area_string.value.split('').reverse().join('')}"`
 
+    string_repeat.classList.add('result-style');
     string_repeat.innerText = `El texto repetido es: "${text_area_string.value}"`
 };
 
@@ -111,11 +119,17 @@ function array_operations() {
         arr.unshift(element);
     })
 
-    console.log(arr);
-
-    array_start.innerText = `El nuevo array con elementos al principio es: ${arr.join(' ')}`;
-
-    array_reverse.innerText = `El array invertido es ${arr.reverse()}`;
+    if(array_reverse.innerText != ''){
+        arr = ['ultimo elemento'];
+        array_reverse.innerText = '';
+        array_start.innerText = '';
+    } else {
+        array_reverse.classList.add('result-style');
+        array_reverse.innerText = `El array invertido es ${arr.reverse()}`;
+        array_start.classList.add('result-style');
+        array_start.innerText = `El nuevo array con elementos al principio es: ${arr.join(' ')}`;
+    }
+    
 
 }
 
@@ -135,10 +149,12 @@ let button_array = document.getElementById('suma-array');
 array_values.innerText = number_array.join(', ');
 
 button_array.addEventListener('click', () => {
+    
+    array_suma.classList.add('result-style');
 
-    let result = array_suma.innerText = number_array.reduce((a, b) => {
+    let result = array_suma.innerText = `La suma del array es = ${number_array.reduce((a, b) => {
         return a + b
-     })
+     })}`
 
      console.log(result);
     
@@ -158,8 +174,11 @@ array_valores.innerText = `Este es el array que se va a iterar: ${new_arr.join('
 function iterateArr(arr) {
 
     for(let i = 0; i < arr.length; i++){
+        iterador_result.classList.add('result-style');
         iterador_result.innerText += arr[i] + '-';
+        iterador_multiplicacion.classList.add('result-style');
         iterador_multiplicacion.innerText += arr[i]*2 + '-';
+        iterador_indices.classList.add('result-style');
         iterador_indices.innerText += i + '-';
         console.log(`El elemento del array es ${arr[i]} y multiplicado por * 2 = ${arr[i]*2} y su indice es ${i}`);
     }
